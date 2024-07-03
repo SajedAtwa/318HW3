@@ -12,7 +12,7 @@ function App() {
     const [editMode, setEditMode] = useState(false);
     const [editId, setEditId] = useState(null);
 
-    const baseURL='https://rest-api-ashy-seven.vercel.app/';
+    const baseURL='https://rest-api-ashy-seven.vercel.app';
 
     useEffect(() => {
         fetchProducts();
