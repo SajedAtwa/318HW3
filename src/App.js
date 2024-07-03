@@ -53,7 +53,7 @@ function App() {
 
     const deleteProduct = async (id) => {
         try {
-            await axios.delete(`${baseURL}/products/${id}`);
+            await axios.delete('${baseURL}/products/${id}');
             fetchProducts();
         } catch (error) {
             console.error('Error deleting product:', error);
