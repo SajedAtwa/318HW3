@@ -12,7 +12,7 @@ function App() {
     const [editMode, setEditMode] = useState(false);
     const [editId, setEditId] = useState(null);
 
-    const baseURL='https://rest-api-ashy-seven.vercel.app';
+    const baseURL = 'https://rest-api-ashy-seven.vercel.app';
 
     useEffect(() => {
         fetchProducts();
@@ -20,7 +20,7 @@ function App() {
 
     const fetchProducts = async () => {
         try {
-            const response = await axios.get('${baseURL}/products');
+            const response = await axios.get(`${baseURL}/products`);
             setProducts(response.data);
         } catch (error) {
             console.error('Error fetching products:', error);
@@ -30,7 +30,7 @@ function App() {
     const addProduct = async () => {
         try {
             const newProduct = { name, price: parseFloat(price), description, rating: parseFloat(rating) };
-            await axios.post('${baseURL}/products', newProduct);
+            await axios.post(`${baseURL}/products`, newProduct);
             fetchProducts();
             resetForm();
         } catch (error) {
