@@ -41,7 +41,7 @@ function App() {
     const updateProduct = async () => {
         try {
             const updatedProduct = { name, price: parseFloat(price), description, rating: parseFloat(rating) };
-            await axios.put('${baseURL}/products/${editId}', updatedProduct);
+            await axios.put(`${baseURL}/products/${editId}`, updatedProduct);
             fetchProducts();
             resetForm();
             setEditMode(false);
@@ -53,7 +53,7 @@ function App() {
 
     const deleteProduct = async (id) => {
         try {
-            await axios.delete('${baseURL}/products/${id}');
+            await axios.delete(`${baseURL}/products/${id}`);
             fetchProducts();
         } catch (error) {
             console.error('Error deleting product:', error);
