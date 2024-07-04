@@ -26,6 +26,26 @@ header input {
   max-width: 400px;
   border: none;
   border-radius: 5px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header button {
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header button:hover {
+  background-color: #0056b3;
 }
 
 main {

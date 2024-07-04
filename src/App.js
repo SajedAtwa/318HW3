@@ -80,6 +80,10 @@ function App() {
         product.name.toLowerCase().includes(search.toLowerCase())
     );
 
+    const openBaseURL = () => {
+        window.open(`${baseURL}/products`, '_blank');
+    };
+
     return (
         <div className="App">
             <header>
@@ -90,6 +94,7 @@ function App() {
                     value={search}
                     onChange={(e) => setSearch(e.target.value)}
                 />
+                <button onClick={openBaseURL}> View JSON API</button>
             </header>
             <main>
                 <section className="add-product">
